@@ -38,17 +38,12 @@ function good(e, dog){
             isGoodDog: dog.isGoodDog
       })
     })
-    let info = document.getElementById('dog-info')
-    let button = document.querySelector('.like')
-    console.log(info)
     if(dog.isGoodDog == true){
-        button.innerText = 'Bad Dog!'
+        e.target.innerText = 'Bad Dog!'
         dog.isGoodDog = false
-        info.appendChild(button)
     }
     else{
-        button.innerText = 'Good Dog!'
+        e.target.innerText = 'Good Dog!'
         dog.isGoodDog = true
-        info.appendChild(button)
     }
 }
